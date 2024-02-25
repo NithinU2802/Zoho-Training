@@ -13,7 +13,7 @@ Output:
 *******************************************************************************/
 import java.util.*;
 
-public class Main
+public class TargetByCoins
 {
   public static void main (String[]args)
   {
