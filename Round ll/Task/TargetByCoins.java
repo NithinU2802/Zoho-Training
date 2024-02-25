@@ -13,29 +13,18 @@ Output:
 *******************************************************************************/
 import java.util.*;
 
-public class TargetByCoins
+public class Main
 {
-
-  static int res = 0;
-
-  public static void check (int a, int b, int c, int t)
-  {
-	if (t == 0)
-	  res++;
-	if (t - 1 >= 0 && a>0)
-	  check (a-1, b, c, t - a);
-	if (t - 2 >= 0 && b>0)
-	  check (a, b-1, c, t - b);
-	if (t - 5 >= 0 && c>0)
-	  check (a, b, c-1, t - c);
-	
-  }
-
   public static void main (String[]args)
   {
 	Scanner x = new Scanner (System.in);
+	int res=0;
 	int a = x.nextInt (), b = x.nextInt (), c = x.nextInt (),t=x.nextInt();
-	check(a,b,c,t);
+	for(int i=0;i<=a;i++)
+	    for(int j=0;j<=b;j++)
+	        for(int k=0;k<=c;k++)
+	            if((i*1)+(j*2)+(k*5)==t)
+	                res++;
 	System.out.println(res);
   }
 }
